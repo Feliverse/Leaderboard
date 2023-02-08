@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.refresh {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.refresh button {
+  height: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.score {
+  list-style: none;
+  border: #e8e8e8;
+}
+
+.score:nth-child(odd) {
+  background-color: #e8e8e8;
+}
