@@ -13,5 +13,5 @@ import './MODULES/formPostAPI';
 //  })
 //    .then((response) => response.json())
 //    .then((json) => console.log(json));
-//  Promise {<pending>}
+
 //  VM331:11 {result: 'Game with ID: ONkrKMpyPufkB8PIueYO added.'}
