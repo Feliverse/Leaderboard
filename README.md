@@ -61,7 +61,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 To Do List <a name="about-project"></a>
 
-**Liderboard** is a set up JavaScript project for the Leaderboard list app, using webpack and ES6 features
+**Liderboard** is a functional JavaScript project for the Leaderboard list app, using webpack and ES6 features
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -174,7 +174,7 @@ a Browser
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **funcionality**
+- [ ] **style**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
