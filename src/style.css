@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
@@ -50,7 +50,7 @@ h3 {
   background-color: rgba(137, 43, 226, 0.568);
   padding: 1%;
   color: #fff;
-  border-color: transparent ;
+  border-color: transparent;
   font-size: larger;
 }
 
@@ -79,7 +79,7 @@ h3 {
 input {
   background-color: #ffffff63;
   padding: 3%;
-  color: #fff;;
+  color: #fff;
   border-radius: 5px;
   border-color: rgba(0, 0, 0, 0.418);
   font-weight: bolder;
