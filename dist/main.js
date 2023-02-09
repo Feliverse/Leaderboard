@@ -15,7 +15,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".contenedor {\\r\\n    display: flex;\\r\\n    flex-direction: row;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://leaderboard/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\r\\n  padding: 0;\\r\\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\\r\\n}\\r\\n\\r\\nh1 {\\r\\n  display: flex;\\r\\n  justify-content: center;\\r\\n}\\r\\n\\r\\n.contenedor {\\r\\n  display: flex;\\r\\n  flex-direction: row;\\r\\n  gap: 10px;\\r\\n  justify-content: center;\\r\\n}\\r\\n\\r\\n.refresh {\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n  gap: 10px;\\r\\n}\\r\\n\\r\\n.refresh button {\\r\\n  height: 20px;\\r\\n}\\r\\n\\r\\n.form {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  gap: 10px;\\r\\n}\\r\\n\\r\\n.score {\\r\\n  list-style: none;\\r\\n  border: #e8e8e8;\\r\\n}\\r\\n\\r\\n.score:nth-child(odd) {\\r\\n  background-color: #e8e8e8;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://leaderboard/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -109,13 +109,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/MODULES/consumeAPI.js":
+/*!***********************************!*\
+  !*** ./src/MODULES/consumeAPI.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getScores\": () => (/* binding */ getScores)\n/* harmony export */ });\nconst getScores = async () => {\r\n  const resFetch = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ONkrKMpyPufkB8PIueYO/scores/');\r\n  const data = await resFetch.json();\r\n  console.log('data:', data);\r\n  const { status } = resFetch; \r\n  if (status !== 200) return 'Error';\r\n  return { data, status };\r\n};\r\n\r\n// Id game: ONkrKMpyPufkB8PIueYO\n\n//# sourceURL=webpack://leaderboard/./src/MODULES/consumeAPI.js?");
+
+/***/ }),
+
+/***/ "./src/MODULES/refresh.js":
+/*!********************************!*\
+  !*** ./src/MODULES/refresh.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _consumeAPI_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./consumeAPI.js */ \"./src/MODULES/consumeAPI.js\");\n\r\n\r\nconst refreshButton = document.querySelector('.refresh-button')\r\n\r\nconst refreshScores = async () => {\r\n    const { data, status } = await (0,_consumeAPI_js__WEBPACK_IMPORTED_MODULE_0__.getScores)();\r\n    if (status !== 200) return null;\r\n\r\n    const scores = document.querySelector('.scores');\r\n    scores.innerHTML = '';\r\n    data.result.map((score) => {\r\n\r\n        const li = `<li class=\"score\">${score.user}:${score.score}</li>`;\r\n        scores.append(li)\r\n\r\n    });\r\n    return scores;\r\n};\r\n\r\nrefreshButton.onclick = () => refreshScores\n\n//# sourceURL=webpack://leaderboard/./src/MODULES/refresh.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _MODULES_refresh_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MODULES/refresh.js */ \"./src/MODULES/refresh.js\");\n\r\n\r\n\r\n\r\n\r\n//fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {\r\n//    method: 'POST',\r\n//    body: JSON.stringify({\r\n//      \"name\": \"Feliverse - starCraft II\"\r\n//    }),\r\n//    headers: {\r\n//      'Content-type': 'application/json; charset=UTF-8',\r\n//    },\r\n//  })\r\n//    .then((response) => response.json())\r\n//    .then((json) => console.log(json));\r\n//  Promise {<pending>}\r\n//  VM331:11 {result: 'Game with ID: ONkrKMpyPufkB8PIueYO added.'}\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ })
 
