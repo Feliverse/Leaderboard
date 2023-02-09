@@ -9,14 +9,15 @@ const refreshScores = async () => {
   if (status !== 200) {
     scores.innerHTML = 'Error ${status}: ${data.message}';
   } else {
-    data.result.map((score) => {
-
-      const li = `<li class="score">${score.user}:${score.score}</li>`;
-      scores.append(li)
+    data.result.forEach(element => {
+      
+      const score = document.createElement('li');
+      score.classList.add('score');
+      score.innerHTML = `${element.user}:${element.score}`;
+      scores.appendChild(score);
 
     });
   }
-  console.log('score:', scores);
   return scores;
 };
 

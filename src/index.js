@@ -1,5 +1,6 @@
 import './style.css';
 import './MODULES/refresh.js';
+import './MODULES/formPostAPI.js'
 
 
 
