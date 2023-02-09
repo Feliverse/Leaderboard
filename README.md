@@ -222,6 +222,6 @@ To get started with webpack setup, please refer to the following webpack tutoria
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Feliverse/To-Do-List/blob/interactive/MIT.md) licensed.
+This project is [MIT](https://github.com/Feliverse/Leaderboard/blob/dev/LICENCE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
