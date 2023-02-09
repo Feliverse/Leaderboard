@@ -12,7 +12,7 @@ const refreshScores = async () => {
     data.result.forEach((element) => {
       const score = document.createElement('li');
       score.classList.add('score');
-      score.innerHTML = `${element.user}:${element.score}`;
+      score.innerHTML = `&#9812 &nbsp &nbsp ${element.user} &nbsp:&nbsp ${element.score}`;
       scores.appendChild(score);
     });
   }
