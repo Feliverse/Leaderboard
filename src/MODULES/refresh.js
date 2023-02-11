@@ -6,8 +6,9 @@ const refreshScores = async () => {
   const { data, status } = await getScores();
 
   const scores = document.querySelector('.scores');
+  scores.innerHTML = '';
   if (status !== 200) {
-    scores.innerHTML = '';
+   
   } else {
     data.result.forEach((element) => {
       const score = document.createElement('li');
